@@ -20,7 +20,7 @@ conda install pytorch torchvision cuda90 -c pytorch
 //raw就是同一病例的dicom影像在z轴上的堆叠，它包含了一个病例所有切片的原始数据
 python dicom2raw.py
 ```
-<img src="https://github.com/RoyceMao/3D-Lung-nodules-detection/blob/master/img/EG1.png" width="900" height="390"/>
+<img src="https://github.com/RoyceMao/3D-Lung-nodules-detection/blob/master/img/EG1.png" width="450" height="200"/>
 
 ## labels提取
 因为candidates.csv中是针对所有切片的结节class标注，不是单个病例的class，模型第2阶段是在单个病例基础上做癌症分类的判断。
@@ -43,11 +43,10 @@ python prepare.py
     输入stage1_numpy：name_clean.npy、name_label.npy<br>
     输入stage2_numpy：name_pbb.npy、name_lbb.npy<br>
 ```
-//2阶段交替式*训练*（注：shell脚本中注释掉的1阶段输出，用根目录下的main.py脚本代替）
+//2阶段交替式**训练**（注：shell脚本中注释掉的1阶段输出，用根目录下的main.py脚本代替）
 bash run_training.sh
-```
-```
-//cd于工程根目录做*预测*
+
+//cd于工程根目录做**预测**
 python main.py
 ```
 
