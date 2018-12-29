@@ -40,12 +40,12 @@ python prepare.py
 ```
 
 ## 训练预测
-    输入stage1_numpy：name_clean.npy、name_label.npy<br>
-    输入stage2_numpy：name_pbb.npy、name_lbb.npy<br>
+输入stage1_numpy：name_clean.npy、name_label.npy<br>
+输入stage2_numpy：name_pbb.npy、name_lbb.npy<br>
+
 ```
 //2阶段交替式**训练**（注：shell脚本中注释掉的1阶段输出，用根目录下的main.py脚本代替）
 bash run_training.sh
-
 //cd于工程根目录做**预测**
 python main.py
 ```
